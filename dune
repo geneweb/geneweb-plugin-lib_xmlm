@@ -1,0 +1,13 @@
+(rule (target plugin_lib_xmlm.ml) (action (run touch %{target})))
+
+(alias
+  (name plugin)
+  (deps plugin_lib_xmlm.cmxs)
+)
+
+(executable
+  (name plugin_lib_xmlm)
+  (embed_in_plugin_libraries xmlm)
+  (flags -linkall)
+  (modes (native plugin))
+)
