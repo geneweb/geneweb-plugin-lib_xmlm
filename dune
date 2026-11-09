@@ -8,6 +8,6 @@
 (executable
   (name plugin_lib_xmlm)
   (embed_in_plugin_libraries xmlm)
-  (flags -linkall)
+  (flags (:standard -linkall))
   (modes (native plugin))
 )
